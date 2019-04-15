@@ -1,5 +1,6 @@
 import React, {Component} from 'react';
 import {userService}      from "../../services";
+import BasicProfile       from "./components/BasicProfile";
 
 class Index extends Component {
     state = {
@@ -23,16 +24,9 @@ class Index extends Component {
             return <div>{`Loading ${params.id}'s profile`}</div>
         }
 
-        const {user} = this.state;
         return (
             <div>
-                <div className="profile">
-                    <img src={user.avatar_url} alt="Avatar"/>
-                    <div>
-                        <h3>{user.name}</h3>
-                        <p>{user.location}</p>
-                    </div>
-                </div>
+                <BasicProfile {...this.state.user} />
             </div>
         );
     }
