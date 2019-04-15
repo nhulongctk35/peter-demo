@@ -1,7 +1,7 @@
 import React, {PureComponent} from 'react';
 import PropTypes from 'prop-types';
 
-import Button from 'components/Button';
+import ButtonLink from './ButtonLink';
 
 class ListOfUsers extends PureComponent {
   render() {
@@ -9,7 +9,7 @@ class ListOfUsers extends PureComponent {
     return (
       <div>
         {
-          users.map(user => (<Button>{user}</Button>))
+          users.map(user => (<ButtonLink key={user} path={`/${user}`} label={user} />))
         }
       </div>
     );

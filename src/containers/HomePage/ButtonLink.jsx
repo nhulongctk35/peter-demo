@@ -1,19 +1,27 @@
 import React, {PureComponent} from 'react';
 import PropTypes from 'prop-types';
+import { Link } from "react-router-dom";
 
-import Button from 'components/Button';
+import Text from 'components/Text';
+
+import './ButtonLink.scss';
 
 class ButtonLink extends PureComponent {
-  handleClick = () => {
-    console.log('Clicked');
-  };
-
   render() {
-    const { label } = this.props;
+    const { label, path } = this.props;
     return (
-      <Button onClick={this.handleClick}>
-        { label }
-      </Button>
+        <Link
+          to={path}
+          className="link"
+        >
+          <Text
+            display="inline-block"
+            color="white"
+            className="link--visited"
+          >
+            {label}
+          </Text>
+        </Link>
     );
   }
 }

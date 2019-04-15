@@ -1,0 +1,16 @@
+.link {
+  text-decoration: none;
+  border: 1px solid #3576dd;
+  background-color: #3576dd;
+  padding: 8px;
+  margin: 4px;
+  border-radius: 3px;
+
+  &--visited {
+    &,
+    &:hover,
+    &:visited {
+      color: white;
+    }
+  }
+}
