@@ -1,4 +1,4 @@
 [build]
-base = "longtran-react-test/"
-publish = "longtran-react-test/build/"
+base = "./"
+publish = "./build/"
 command = "yarn build"
