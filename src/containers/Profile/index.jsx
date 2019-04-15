@@ -1,6 +1,7 @@
 import React, {Component} from 'react';
 import {userService}      from "../../services";
 import BasicProfile       from "./components/BasicProfile";
+import Header             from "../../components/Header";
 
 class Index extends Component {
     state = {
@@ -26,7 +27,10 @@ class Index extends Component {
 
         return (
             <div>
-                <BasicProfile {...this.state.user} />
+                <Header label="User"/>
+                <div className="main-content">
+                    <BasicProfile {...this.state.user} />
+                </div>
             </div>
         );
     }

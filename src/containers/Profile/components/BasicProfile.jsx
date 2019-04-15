@@ -1,12 +1,14 @@
 import React from 'react';
 
+import './BasicProfile.style.scss'
+
 const BasicProfile = ({avatar_url, name, location}) => {
     return (
         <div className="user-profile">
-            <img src={avatar_url} alt="Avatar"/>
-            <div>
-                <h3>{name}</h3>
-                <p>{location}</p>
+            <img src={avatar_url} alt="Avatar" className="user-avatar" />
+            <div className="user-info">
+                <h3 className="user-name">{name}</h3>
+                <p className="user-location">{location}</p>
             </div>
         </div>
     );
