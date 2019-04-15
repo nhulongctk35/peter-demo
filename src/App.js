@@ -1,7 +1,7 @@
 import React, {Component}             from 'react';
 import {BrowserRouter, Route, Switch} from "react-router-dom";
 
-import HomePage    from './containers/HomePage'
+import HomePage    from './containers/HomePage/Home.container'
 import ProfilePage from './containers/Profile'
 
 class App extends Component {

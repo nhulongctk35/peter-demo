@@ -1,0 +1,52 @@
+$font-sizes-by-names: (
+  small: 0.75rem,
+  normal: 1rem,
+  medium: 1.5rem,
+  large: 2rem,
+);
+
+$font-colors-by-names: (
+  offBlack: #333,
+  red: #ff00ff,
+  blue: blue,
+  green: #009a44,
+        offWhite: #c9c9c9,
+        orange: #fd7e14,
+);
+
+
+$displays: inline, inline-block, block;
+$weights-by-names: (
+  normal: 400,
+  semibold: 600,
+  bold: 700
+);
+
+.text {
+  $font-sizes: map-keys($font-sizes-by-names);
+  @each $font-size in $font-sizes {
+    &--#{$font-size} {
+      font-size: map_get($font-sizes-by-names, $font-size);
+    }
+  }
+
+  $color-names: map-keys($font-colors-by-names);
+  @each $color-name in $color-names {
+    &--#{$color-name} {
+      color: map_get($font-colors-by-names, $color-name);
+    }
+  }
+
+  @each $display in $displays {
+    &--#{$display} {
+      display: $display
+    }
+  }
+
+  $weight-names: map-keys($weights-by-names);
+  @each $weight-name in $weight-names {
+    &--#{$weight-name} {
+      font-weight: map_get($weights-by-names, $weight-name)!important;
+    }
+  }
+}
