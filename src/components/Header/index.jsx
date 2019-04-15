@@ -1,9 +1,9 @@
-import React from 'react';
+import React     from 'react';
 import PropTypes from 'prop-types';
 
 import './Header.style.scss'
 
-const Header = ({ label }) => {
+const Header = ({label}) => {
     return (
         <header id="master-header">
             <span>{label}</span>

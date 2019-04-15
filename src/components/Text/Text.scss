@@ -1,21 +1,21 @@
 $font-sizes-by-names: (
-  small: 0.75rem,
-  normal: 1rem,
-  medium: 1.5rem,
-  large: 2rem,
+        small: 0.75rem,
+        normal: 1rem,
+        medium: 1.5rem,
+        large: 2rem,
 );
 
 $font-colors-by-names: (
-  offBlack: #333,
+        offBlack: #333,
         white: #fffff,
 );
 
 
 $displays: inline, inline-block, block;
 $weights-by-names: (
-  normal: 400,
-  semibold: 600,
-  bold: 700
+        normal: 400,
+        semibold: 600,
+        bold: 700
 );
 
 .text {
@@ -42,7 +42,7 @@ $weights-by-names: (
   $weight-names: map-keys($weights-by-names);
   @each $weight-name in $weight-names {
     &--#{$weight-name} {
-      font-weight: map_get($weights-by-names, $weight-name)!important;
+      font-weight: map_get($weights-by-names, $weight-name) !important;
     }
   }
 }

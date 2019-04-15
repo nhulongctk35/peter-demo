@@ -6,7 +6,7 @@ import Header             from "../../components/Header";
 class Index extends Component {
     state = {
         user: null
-    }
+    };
 
     componentDidMount() {
         const {match: {params}} = this.props;

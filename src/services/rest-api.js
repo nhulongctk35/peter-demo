@@ -61,13 +61,13 @@ export default class RestAPI {
         });
     }
 
-    execute({ method, url, ...rest }) {
+    execute({method, url, ...rest}) {
         return this.axios({
             method,
             url,
             ...rest,
         })
-            .then(({ data }) => data)
+            .then(({data}) => data)
             .catch(this.catchError);
     }
 }
