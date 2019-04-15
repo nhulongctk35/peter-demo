@@ -1,0 +1,4 @@
+[build]
+base = "longtran-react-test/"
+publish = "longtran-react-test/build/"
+command = "yarn build"
